@@ -10,7 +10,7 @@ public class MyController {
         @ResponseBody
         @RequestMapping("/")
         public String index(){
-                return "I miss you now, Ulkar";
+                return "Batman misses Catwoman";
         }
 
 }

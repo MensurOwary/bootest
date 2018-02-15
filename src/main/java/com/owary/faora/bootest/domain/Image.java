@@ -1,4 +1,4 @@
-package com.owary.faora.bootest;
+package com.owary.faora.bootest.domain;
 
 public class Image {
 

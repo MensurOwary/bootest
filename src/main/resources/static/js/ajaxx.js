@@ -1,6 +1,6 @@
 function search() {
-    var data = {keyword: $('#keyword').val()};
-    $.post('search', data, function (items) {
+    var data = {keyword: $('#keyword').val(), perPage: $('#perPage').val()};
+    $.post('/', data, function (items) {
         console.log($(items).find('#columns').has("div"));
         if ($(items).find('#columns').has("div").length){
             $('#columns').html($(items).find('#columns').html());
@@ -9,3 +9,8 @@ function search() {
         }
     },'html');
 }
+
+$("#form").submit(function(e) {
+    search();
+    e.preventDefault();
+});
